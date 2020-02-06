@@ -22,7 +22,8 @@ namespace DigialMaketingLauncher
 
         static void LaunchDailyAction(ActionParam actionParam)
         {
-             TaskScheduler.Instance.ScheduleTask(actionParam.ExecHour, actionParam.ExecMinute, 0.02, () => Batch.Execute(actionParam.Url));
+            TaskScheduler.Instance.ScheduleTask(actionParam.ExecHour, actionParam.ExecMinute, 24, () => Batch.Execute(actionParam));
+            Console.WriteLine($"{actionParam.Name} is set to run at {actionParam.ExecHour}:{actionParam.ExecMinute}");
         }
     }
 }

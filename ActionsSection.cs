@@ -29,8 +29,10 @@ namespace DigialMaketingLauncher
 
     public class ActionParam
     {
+        public string Name { get; set; }
         public string Url { get; set; }
         public int ExecHour { get; set; }
         public int ExecMinute { get; set; }
+        public string Type { get; set; }
     }
 }
